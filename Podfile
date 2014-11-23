@@ -4,8 +4,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Karmakontot' do
-    pod 'MagicalRecord', '~> 2.2'
-    pod 'RestKit', '~> 0.24'
+    pod 'RestKit'
+    pod 'Facebook-iOS-SDK'
 end
 
 target 'KarmakontotTests' do

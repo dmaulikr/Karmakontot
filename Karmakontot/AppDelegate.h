@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+#import "CoreData+MagicalRecord.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,6 +22,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+// This method will handle ALL the session state changes in the app
 
 
 @end

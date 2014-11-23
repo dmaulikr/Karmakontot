@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E8DBC1FE1A221A1E003D0E0E /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E8DBC1FF1A221A1E003D0E0E /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				E8DBC2021A221A23003D0E0E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C654FBB2B950369B05D12704 /* libPods-Karmakontot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F6A8F9CA3CECF617D300A8 /* libPods-Karmakontot.a */; };
 		E8DBC1BE1A21D0CD003D0E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1BD1A21D0CD003D0E0E /* main.m */; };
@@ -15,6 +29,21 @@
 		E8DBC1CC1A21D0CD003D0E0E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBC1CB1A21D0CD003D0E0E /* Images.xcassets */; };
 		E8DBC1CF1A21D0CD003D0E0E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8DBC1CD1A21D0CD003D0E0E /* LaunchScreen.xib */; };
 		E8DBC1DB1A21D0CD003D0E0E /* KarmakontotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1DA1A21D0CD003D0E0E /* KarmakontotTests.m */; };
+		E8DBC1E51A21D6BF003D0E0E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DBC1E41A21D6BF003D0E0E /* CoreData.framework */; };
+		E8DBC1E71A21D8DE003D0E0E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DBC1E61A21D8DE003D0E0E /* MapKit.framework */; };
+		E8DBC1EA1A21DAF4003D0E0E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1E91A21DAF4003D0E0E /* MapViewController.m */; };
+		E8DBC1ED1A21DD9E003D0E0E /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1EC1A21DD9E003D0E0E /* AddTaskViewController.m */; };
+		E8DBC1F01A21ED78003D0E0E /* KarmaHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1EF1A21ED78003D0E0E /* KarmaHeaderView.m */; };
+		E8DBC1F31A220B4D003D0E0E /* AddTaskHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1F21A220B4D003D0E0E /* AddTaskHeaderCell.m */; };
+		E8DBC1F61A221043003D0E0E /* AddTaskContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC1F51A221043003D0E0E /* AddTaskContentCell.m */; };
+		E8DBC20B1A221A60003D0E0E /* _Help.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2071A221A60003D0E0E /* _Help.m */; };
+		E8DBC20C1A221A60003D0E0E /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2081A221A60003D0E0E /* _User.m */; };
+		E8DBC20D1A221A60003D0E0E /* Help.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2091A221A60003D0E0E /* Help.m */; };
+		E8DBC20E1A221A60003D0E0E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC20A1A221A60003D0E0E /* User.m */; };
+		E8DBC2141A221CB8003D0E0E /* _Done.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2121A221CB8003D0E0E /* _Done.m */; };
+		E8DBC2151A221CB8003D0E0E /* Done.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2131A221CB8003D0E0E /* Done.m */; };
+		E8DBC2181A222D24003D0E0E /* LocalHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2171A222D24003D0E0E /* LocalHelp.m */; };
+		E8DBC21E1A22328C003D0E0E /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC21D1A22328C003D0E0E /* CalloutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +72,34 @@
 		E8DBC1D41A21D0CD003D0E0E /* KarmakontotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarmakontotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBC1D91A21D0CD003D0E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8DBC1DA1A21D0CD003D0E0E /* KarmakontotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarmakontotTests.m; sourceTree = "<group>"; };
+		E8DBC1E41A21D6BF003D0E0E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E8DBC1E61A21D8DE003D0E0E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E8DBC1E81A21DAF4003D0E0E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E8DBC1E91A21DAF4003D0E0E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E8DBC1EB1A21DD9E003D0E0E /* AddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		E8DBC1EC1A21DD9E003D0E0E /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
+		E8DBC1EE1A21ED78003D0E0E /* KarmaHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KarmaHeaderView.h; sourceTree = "<group>"; };
+		E8DBC1EF1A21ED78003D0E0E /* KarmaHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KarmaHeaderView.m; sourceTree = "<group>"; };
+		E8DBC1F11A220B4D003D0E0E /* AddTaskHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskHeaderCell.h; sourceTree = "<group>"; };
+		E8DBC1F21A220B4D003D0E0E /* AddTaskHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskHeaderCell.m; sourceTree = "<group>"; };
+		E8DBC1F41A221043003D0E0E /* AddTaskContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskContentCell.h; sourceTree = "<group>"; };
+		E8DBC1F51A221043003D0E0E /* AddTaskContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskContentCell.m; sourceTree = "<group>"; };
+		E8DBC2031A221A60003D0E0E /* _Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Help.h; path = Model/_Help.h; sourceTree = "<group>"; };
+		E8DBC2041A221A60003D0E0E /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = Model/_User.h; sourceTree = "<group>"; };
+		E8DBC2051A221A60003D0E0E /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Help.h; path = Model/Help.h; sourceTree = "<group>"; };
+		E8DBC2061A221A60003D0E0E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		E8DBC2071A221A60003D0E0E /* _Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Help.m; path = Model/_Help.m; sourceTree = "<group>"; };
+		E8DBC2081A221A60003D0E0E /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = Model/_User.m; sourceTree = "<group>"; };
+		E8DBC2091A221A60003D0E0E /* Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Help.m; path = Model/Help.m; sourceTree = "<group>"; };
+		E8DBC20A1A221A60003D0E0E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		E8DBC2101A221CB8003D0E0E /* _Done.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Done.h; path = Model/_Done.h; sourceTree = "<group>"; };
+		E8DBC2111A221CB8003D0E0E /* Done.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Done.h; path = Model/Done.h; sourceTree = "<group>"; };
+		E8DBC2121A221CB8003D0E0E /* _Done.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Done.m; path = Model/_Done.m; sourceTree = "<group>"; };
+		E8DBC2131A221CB8003D0E0E /* Done.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Done.m; path = Model/Done.m; sourceTree = "<group>"; };
+		E8DBC2161A222D24003D0E0E /* LocalHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalHelp.h; sourceTree = "<group>"; };
+		E8DBC2171A222D24003D0E0E /* LocalHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalHelp.m; sourceTree = "<group>"; };
+		E8DBC21C1A22328C003D0E0E /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
+		E8DBC21D1A22328C003D0E0E /* CalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DBC1E51A21D6BF003D0E0E /* CoreData.framework in Frameworks */,
+				E8DBC1E71A21D8DE003D0E0E /* MapKit.framework in Frameworks */,
 				C654FBB2B950369B05D12704 /* libPods-Karmakontot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +135,8 @@
 		19F203142D784C2E9D3B2C57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8DBC1E61A21D8DE003D0E0E /* MapKit.framework */,
+				E8DBC1E41A21D6BF003D0E0E /* CoreData.framework */,
 				98F6A8F9CA3CECF617D300A8 /* libPods-Karmakontot.a */,
 			);
 			name = Frameworks;
@@ -107,9 +168,24 @@
 				E8DBC1BF1A21D0CD003D0E0E /* AppDelegate.h */,
 				E8DBC1C01A21D0CD003D0E0E /* AppDelegate.m */,
 				E8DBC1C81A21D0CD003D0E0E /* Main.storyboard */,
+				E8DBC1F11A220B4D003D0E0E /* AddTaskHeaderCell.h */,
+				E8DBC1F21A220B4D003D0E0E /* AddTaskHeaderCell.m */,
+				E8DBC1F41A221043003D0E0E /* AddTaskContentCell.h */,
+				E8DBC1F51A221043003D0E0E /* AddTaskContentCell.m */,
+				E8DBC1EB1A21DD9E003D0E0E /* AddTaskViewController.h */,
+				E8DBC1EC1A21DD9E003D0E0E /* AddTaskViewController.m */,
+				E8DBC1E81A21DAF4003D0E0E /* MapViewController.h */,
+				E8DBC1E91A21DAF4003D0E0E /* MapViewController.m */,
+				E8DBC21C1A22328C003D0E0E /* CalloutView.h */,
+				E8DBC21D1A22328C003D0E0E /* CalloutView.m */,
+				E8DBC1EE1A21ED78003D0E0E /* KarmaHeaderView.h */,
+				E8DBC1EF1A21ED78003D0E0E /* KarmaHeaderView.m */,
 				E8DBC1CB1A21D0CD003D0E0E /* Images.xcassets */,
 				E8DBC1CD1A21D0CD003D0E0E /* LaunchScreen.xib */,
 				E8DBC1C21A21D0CD003D0E0E /* Karmakontot.xcdatamodeld */,
+				E8DBC2161A222D24003D0E0E /* LocalHelp.h */,
+				E8DBC2171A222D24003D0E0E /* LocalHelp.m */,
+				E8DBC1FD1A221662003D0E0E /* Model */,
 				E8DBC1BB1A21D0CC003D0E0E /* Supporting Files */,
 			);
 			path = Karmakontot;
@@ -139,6 +215,33 @@
 				E8DBC1D91A21D0CD003D0E0E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8DBC1FD1A221662003D0E0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC20F1A221A68003D0E0E /* Mogenerator */,
+				E8DBC2111A221CB8003D0E0E /* Done.h */,
+				E8DBC2051A221A60003D0E0E /* Help.h */,
+				E8DBC2061A221A60003D0E0E /* User.h */,
+				E8DBC2091A221A60003D0E0E /* Help.m */,
+				E8DBC2131A221CB8003D0E0E /* Done.m */,
+				E8DBC20A1A221A60003D0E0E /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E8DBC20F1A221A68003D0E0E /* Mogenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC2101A221CB8003D0E0E /* _Done.h */,
+				E8DBC2121A221CB8003D0E0E /* _Done.m */,
+				E8DBC2031A221A60003D0E0E /* _Help.h */,
+				E8DBC2041A221A60003D0E0E /* _User.h */,
+				E8DBC2071A221A60003D0E0E /* _Help.m */,
+				E8DBC2081A221A60003D0E0E /* _User.m */,
+			);
+			name = Mogenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +296,18 @@
 					E8DBC1B71A21D0CC003D0E0E = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = L5FHQQ6WHG;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E8DBC1D31A21D0CD003D0E0E = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = E8DBC1B71A21D0CC003D0E0E;
+					};
+					E8DBC1FE1A221A1E003D0E0E = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -215,6 +326,7 @@
 			targets = (
 				E8DBC1B71A21D0CC003D0E0E /* Karmakontot */,
 				E8DBC1D31A21D0CD003D0E0E /* KarmakontotTests */,
+				E8DBC1FE1A221A1E003D0E0E /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -270,6 +382,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Karmakontot/Pods-Karmakontot-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E8DBC2021A221A23003D0E0E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Karmakontot/Karmakontot.xcdatamodeld/Karmakontot.xcdatamodel -O Karmakontot/Model --template-var arc=true";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,9 +402,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DBC20C1A221A60003D0E0E /* _User.m in Sources */,
+				E8DBC1F01A21ED78003D0E0E /* KarmaHeaderView.m in Sources */,
+				E8DBC1ED1A21DD9E003D0E0E /* AddTaskViewController.m in Sources */,
+				E8DBC1F31A220B4D003D0E0E /* AddTaskHeaderCell.m in Sources */,
 				E8DBC1C11A21D0CD003D0E0E /* AppDelegate.m in Sources */,
 				E8DBC1BE1A21D0CD003D0E0E /* main.m in Sources */,
 				E8DBC1C41A21D0CD003D0E0E /* Karmakontot.xcdatamodeld in Sources */,
+				E8DBC21E1A22328C003D0E0E /* CalloutView.m in Sources */,
+				E8DBC20B1A221A60003D0E0E /* _Help.m in Sources */,
+				E8DBC20E1A221A60003D0E0E /* User.m in Sources */,
+				E8DBC2141A221CB8003D0E0E /* _Done.m in Sources */,
+				E8DBC20D1A221A60003D0E0E /* Help.m in Sources */,
+				E8DBC1F61A221043003D0E0E /* AddTaskContentCell.m in Sources */,
+				E8DBC2181A222D24003D0E0E /* LocalHelp.m in Sources */,
+				E8DBC1EA1A21DAF4003D0E0E /* MapViewController.m in Sources */,
+				E8DBC2151A221CB8003D0E0E /* Done.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +541,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Karmakontot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,10 +556,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Karmakontot/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -457,6 +599,20 @@
 			};
 			name = Release;
 		};
+		E8DBC2001A221A1E003D0E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E8DBC2011A221A1E003D0E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E8DBC1FF1A221A1E003D0E0E /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DBC2001A221A1E003D0E0E /* Debug */,
+				E8DBC2011A221A1E003D0E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
