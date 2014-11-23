@@ -1,11 +1,12 @@
 from flask import Flask
+from config import conf
 
 app = Flask(__name__)
 
 import mysql.connector
 
 cnx = mysql.connector.connect(user='karmakonto', password='bitch',
-                              host='127.0.0.1', port='8889',
+                              host=conf['db_host'], port=conf['db_port'],
                               database='karmakonto')
 
 @app.errorhandler(500)
