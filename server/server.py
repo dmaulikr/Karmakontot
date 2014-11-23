@@ -1,8 +1,10 @@
 from flask import Flask
+import mysql.connector
+import json
 
 app = Flask(__name__)
 
-import mysql.connector
+
 
 cnx = mysql.connector.connect(user='karmakonto', password='bitch',
                               host='127.0.0.1', port='8889',
@@ -34,9 +36,16 @@ def karma():
 
 @app.route("/rest/1.0/help")
 def helps():
-  cursor = cnx.cursor()
-  query = "SELECT help_id, user FROM help;"
-  cursor.execute(query)
+  results = makeQuery("SELECT help_id, user, message, coord_lat, coord_long, done_by FROM help WHERE done_by IS NULL")
+
+  helps = []
+
+  for (help_id, user, message, coord_lat, coord_long, done_by) in results:
+    helps.append({'id':help_id, 'user':user, 'message':message, 'latitude':coord_lat, 'longitude':coord_long, 'done':None})
+
+  respose = {'helps':helps}
+
+  return json.dumps(respose)
 
 # run simple query and return results as a list of tuples
 def makeQuery(query):
