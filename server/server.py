@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+from flask import Response
 from config import conf
 import mysql.connector
 import json
@@ -43,40 +44,89 @@ def test():
 @app.route("/rest/1.0/help/<id>")
 def help(id=None):
   if request.method == 'POST':
-    return postHelp()
+    user = request.form['user']
+    title = request.form['title']
+    message = request.form['message']
+    latitude = request.form['latitude']
+    longitude = request.form['longitude']
+    return makeResponse(postHelp(user, title, message, latitude, longitude))
   else:
     return getHelp(id)
 
   return json.dumps(respose)
 
 def getHelp(id=None):
-  query = "SELECT help_id, user, title, message, coord_lat, coord_long, done_by FROM help"
+  query = "SELECT id, user, title, message, coord_lat, coord_long, done_id, timestamp FROM help"
 
   if id != None:
-    query += " WHERE help_id =" + id
+    query += " WHERE id =" + id
 
   results = makeQuery(query)
 
   helps = []
 
-  for (help_id, user, title, message, coord_lat, coord_long, done_by) in results:
-    helps.append({'id':help_id, 'user':user, 'title':title, 'message':message, 'latitude':coord_lat, 'longitude':coord_long, 'done':done_by, 'url':"/rest/1.0/help/" + str(help_id)})
+  for (id, user, title, message, coord_lat, coord_long, done_id, timestamp) in results:
+    helps.append({'id':id, 'user':user, 'title':title, 'message':message, 'latitude':coord_lat, 'longitude':coord_long, 'done_id':done_id, 'url':"/rest/1.0/help/" + str(id), 'timestamp':str(timestamp)})
 
   respose = {'helps':helps, 'hits':len(helps)}
 
-  return json.dumps(respose)
+  return makeResponse(respose)
 
-def postHelp():
-  respose = {}
-  return json.dumps(respose)
+def postHelp(user, title, message, latitude, longitude):
+  add_help = ("INSERT INTO help "
+              "(user, title, message, coord_lat, coord_long) "
+              "VALUES (%s, %s, %s, %s, %s)")
+
+  help = (user, title, message, latitude, longitude)
+
+  cursor = cnx.cursor()
+
+  cursor.execute(add_help, help)
+
+  help_id = cursor.lastrowid
+
+  return help_id
 
 ###
 # DONE
 ###
+@app.route("/rest/1.0/done/", methods=['POST', 'GET'])
+@app.route("/rest/1.0/done/<id>")
+def done(id=None):
+  respose = {}
 
-###
-# THANKS
-###
+  if request.method == 'POST':
+    help_id = request.form['help_id']
+    user = request.form['user']
+    return makeResponse(postDone(help_id, user))
+  else:
+    query = "SELECT id, user, help_id, timestamp FROM done"
+    if id != None:
+      query += " WHERE id = " + id
+    results = makeQuery(query)
+    dones = []
+    for (id, user, help_id, timestamp) in results:
+      dones.append({'id':id, 'user':user, 'help_id':help_id, 'url':"/rest/1.0/done/" + str(id), 'timestamp':str(timestamp)})
+
+    respose = {'dones':dones, 'hits':len(dones)}
+
+  return makeResponse(respose)
+
+def postDone(help_id, user):
+  add_done = ("INSERT INTO done "
+              "(help_id, user) "
+              "VALUES (%s, %s)")
+
+  done = (help_id, user)
+
+  cursor = cnx.cursor()
+
+  cursor.execute(add_done, done)
+
+  done_id = cursor.lastrowid
+
+  return done_id
+
 
 ###
 #  KARMA
@@ -99,9 +149,11 @@ def karma(id=None):
 
     respose = {'karmas':karmas, 'hits':len(karmas)}
 
-  return json.dumps(respose)
+  return makeResponse(respose)
 
 
+def makeResponse(response):
+  return Response(json.dumps(response), mimetype='application/json')
 
 # run simple query and return results as a list of tuples
 def makeQuery(query):
