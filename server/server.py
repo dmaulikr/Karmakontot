@@ -18,23 +18,7 @@ def internal_error(exception):
 
 @app.route("/")
 def hello():
-
-  return "Hello Kitty!"
-
-@app.route("/test")
-def test():
-
-  query = "SELECT help_id, user FROM help;"
-
-  results = makeQuery(query)
-  
-  message = "Users foo: " 
-
-  for (id, user) in results:
-    message = message + user + " "
-
-  return message
-
+  return "Hello World!"
 
 ###
 # HELP
